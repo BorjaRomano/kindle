@@ -52,7 +52,8 @@ descargar() {
     wifi_off
 }
 
-pintar_imagen() { [ -f "$IMG" ] && "$FBINK" -q -c -f -g file="$IMG"; }
+# El FBInk de KOReader no trae soporte de imágenes; eips (de serie) sí
+pintar_imagen() { [ -f "$IMG" ] && eips -f -g "$IMG" >/dev/null 2>&1; }
 
 # Coordenadas del hueco de la hora en la plantilla (1072x1448). El fondo del
 # texto puede tapar la raya de la cabecera, así que se vuelve a dibujar.
