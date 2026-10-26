@@ -138,10 +138,13 @@ def main():
     }
 
     SALIDA.mkdir(exist_ok=True)
-    pagina = SALIDA / "panel.html"
-    pagina.write_text(Template((RAIZ / "template.html").read_text(encoding="utf-8")).substitute(datos),
-                      encoding="utf-8")
-    renderizar(pagina.resolve(), SALIDA / "panel.png")
+    plantilla = Template((RAIZ / "template.html").read_text(encoding="utf-8"))
+    # panel.png deja el hueco de la hora vacío: la pinta el propio Kindle cada minuto.
+    # preview.png la incluye, para la vista previa web.
+    for nombre, visible in (("panel", "hidden"), ("preview", "visible")):
+        pagina = SALIDA / f"{nombre}.html"
+        pagina.write_text(plantilla.substitute(datos, hora_visible=visible), encoding="utf-8")
+        renderizar(pagina.resolve(), SALIDA / f"{nombre}.png")
     (SALIDA / "index.html").write_text(
         (RAIZ / "index.html").read_text(encoding="utf-8").replace("$hora", datos["hora"]), encoding="utf-8")
     print(f"Panel generado: {SALIDA / 'panel.png'} ({datos['hora']}, {datos['temp']}° {descripcion})")

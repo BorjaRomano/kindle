@@ -9,7 +9,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { width: 1072px; height: 1448px; background: var(--paper); color: var(--ink); overflow: hidden; }
   body { font-family: Georgia, "DejaVu Serif", "Times New Roman", serif; padding: 48px 64px 40px; display: flex; flex-direction: column; gap: 30px; }
-  .sans { font-family: "Segoe UI", "Noto Sans", "DejaVu Sans", Helvetica, Arial, sans-serif; }
+  .sans { font-family: "Noto Sans", "Segoe UI", "DejaVu Sans", Helvetica, Arial, sans-serif; }
 
   header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 4px solid var(--ink); padding-bottom: 24px; }
   .hora { font-size: 190px; line-height: .85; font-weight: 700; letter-spacing: -6px; }
@@ -81,7 +81,7 @@
 </svg>
 
 <header>
-  <div class="hora sans">$hora</div>
+  <div class="hora sans" style="visibility: $hora_visible">$hora</div>
   <div class="fecha sans">
     <div class="dia">$dia</div>
     <div class="resto">$fecha</div>
