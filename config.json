@@ -1,0 +1,31 @@
+{
+  "ciudad": "Oviedo",
+  "latitud": 43.3614,
+  "longitud": -5.8494,
+  "zona_horaria": "Europe/Madrid",
+  "intervalo_min": 30,
+
+  "eventos_ejemplo": [
+    { "hora": "09:00", "titulo": "Daily del equipo", "lugar": "Teams · 15 min" },
+    { "hora": "11:30", "titulo": "Revisión con cliente", "lugar": "Sala 2" },
+    { "hora": "14:00", "titulo": "Comida", "lugar": "" },
+    { "hora": "17:00", "titulo": "Dentista", "lugar": "C/ Ejemplo 12" }
+  ],
+
+  "tareas_ejemplo": [
+    { "texto": "Enviar informe", "hecha": true },
+    { "texto": "Llamar al banco", "hecha": false },
+    { "texto": "Comprar pan", "hecha": false },
+    { "texto": "Pasar libros al Kindle", "hecha": false }
+  ],
+
+  "frases": [
+    ["Un lector vive mil vidas antes de morir. El que nunca lee vive solo una.", "George R. R. Martin"],
+    ["Siempre imaginé que el Paraíso sería algún tipo de biblioteca.", "Jorge Luis Borges"],
+    ["El que lee mucho y anda mucho, ve mucho y sabe mucho.", "Miguel de Cervantes"],
+    ["Caminante, no hay camino, se hace camino al andar.", "Antonio Machado"],
+    ["La vida no es la que uno vivió, sino la que uno recuerda.", "Gabriel García Márquez"],
+    ["Puedo escribir los versos más tristes esta noche.", "Pablo Neruda"],
+    ["Verde que te quiero verde.", "Federico García Lorca"]
+  ]
+}

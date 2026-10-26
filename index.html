@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel Kindle</title>
+<style>
+  :root { --bg: #e9e6df; --fg: #222; --marco: #1b1b1b; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #161616; --fg: #ddd; --marco: #2c2c2c; } }
+  body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--fg); font-family: system-ui, sans-serif;
+         display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px 16px; box-sizing: border-box; }
+  .kindle { background: var(--marco); border-radius: 28px; padding: 36px 30px 64px; box-shadow: 0 20px 50px rgba(0,0,0,.35); max-width: 100%; box-sizing: border-box; }
+  .kindle img { display: block; width: min(536px, calc(100vw - 92px)); height: auto; background: #fff; }
+  p { margin: 0; font-size: 14px; opacity: .75; text-align: center; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+  <div class="kindle"><img src="panel.png" alt="Panel e-ink del Kindle"></div>
+  <p>Generado a las $hora · se actualiza cada 30 min · <a href="panel.png">panel.png</a> (lo que descarga el Kindle)</p>
+</body>
+</html>
